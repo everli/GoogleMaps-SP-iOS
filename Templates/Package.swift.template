@@ -38,28 +38,28 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "GoogleMaps",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMaps.xcframework.zip",
-            checksum: "f5cefd2095e59d1e83209adce28c9efe4b8333c1c1816cfabee5c3dd77bff2cf"
+            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMaps.xcframework.zip",
+            checksum: "__GoogleMaps__checksum__"
         ),
         .binaryTarget(
             name: "GoogleMapsBase",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMapsBase.xcframework.zip",
-            checksum: "26e6743e8d4a7f4052dfa1a0d439eb6f34e6048155455026a863e34b373f3ca5"
+            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMapsBase.xcframework.zip",
+            checksum: "__GoogleMapsBase__checksum__"
         ),
         .binaryTarget(
             name: "GoogleMapsCore",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMapsCore.xcframework.zip",
-            checksum: "a25ef17e87570a8e9950e9c22a11a9d94ebec8f4ba7c73fca43049497996e347"
+            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMapsCore.xcframework.zip",
+            checksum: "__GoogleMapsCore__checksum__"
         ),
         .binaryTarget(
             name: "GoogleMapsM4B",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMapsM4B.xcframework.zip",
-            checksum: "0ebb3a7664ec178d276599a0cd82c323893c88576bd2e0840a783dfd8e0adf6d"
+            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMapsM4B.xcframework.zip",
+            checksum: "__GoogleMapsM4B__checksum__"
         ),
         .binaryTarget(
             name: "GooglePlaces",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GooglePlaces.xcframework.zip",
-            checksum: "35482d2b36db4139bb16b3ac6a401e9f2f6781220d502f11c6cd4f26ab62b2d4"
+            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GooglePlaces.xcframework.zip",
+            checksum: "__GooglePlaces__checksum__"
         ),
     ]
 )

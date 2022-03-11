@@ -1,5 +1,6 @@
 #!/bin/bash
 
+VERSION=${1:-6.0.1-maps} # Default value 6.0.1-maps
 BUILD_DIRECTORY="Build"
 
 function convert_frameworks_arm64_to_iphonesimulator() {
@@ -7,7 +8,7 @@ function convert_frameworks_arm64_to_iphonesimulator() {
   framework_name=$2
 
   xcrun vtool -arch arm64 \
-    -set-build-version 7 11.0 15.2 \
+    -set-build-version 7 12.0 15.2 \
     -replace \
     -output "../Carthage/Build/iOS/$framework_name.framework/$framework_name" \
     "../Carthage/Build/iOS/$framework_name.framework/$framework_name"
@@ -58,6 +59,19 @@ function create_xcframework() {
 
     # Save the SHA-256 checksum
     shasum -a 256 "$framework_name.xcframework.zip" >> checksum.txt
+
+    # Save the SHA-256 checksum and skip the filename
+    checksum=$(eval shasum -a 256 "$framework_name.xcframework.zip" | sed -r 's:\\*([^ ]*).*:\1:')
+    replace_sed "__${framework_name}__checksum__" $checksum "../Package.swift"
+}
+
+function replace_sed() {
+  old_string=$1
+  new_string=$2
+  file_name=$3
+
+  sed -i -e "s#${old_string}#${new_string}#g" "${file_name}"
+  rm -rf "$file_name-e"
 }
 
 function cleanup() {
@@ -71,6 +85,9 @@ carthage update
 rm -rf $BUILD_DIRECTORY
 mkdir $BUILD_DIRECTORY
 cd $BUILD_DIRECTORY
+
+cp -R "../Templates/Package.swift.template" "../Package.swift"
+echo "Version: $VERSION" >> checksum.txt
 
 frameworks=("GoogleMaps" "GoogleMapsBase" "GoogleMapsCore" "GoogleMapsM4B" "GooglePlaces")
 for framework in "${frameworks[@]}"; do
@@ -86,6 +103,12 @@ for framework in "${frameworks[@]}"; do
   create_xcframework "GoogleMaps" "$framework"
 done
 
+replace_sed "__VERSION__" $VERSION "../Package.swift"
+
 cleanup
+
+git add "../Package.swift"
+git commit -m "Bump version $VERSION"
+git tag $VERSION
 
 echo $'\n** XCFRAMEWORK CREATION FINISHED **\n'
