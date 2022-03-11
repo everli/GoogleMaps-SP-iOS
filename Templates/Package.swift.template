@@ -5,7 +5,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "GoogleMapsWrapper",
+    name: "GoogleMapsSP",
     products: [
         .library(
             name: "GoogleMaps",
@@ -38,27 +38,27 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "GoogleMaps",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMaps.xcframework.zip",
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/__VERSION__/GoogleMaps.xcframework.zip",
             checksum: "__GoogleMaps__checksum__"
         ),
         .binaryTarget(
             name: "GoogleMapsBase",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMapsBase.xcframework.zip",
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/__VERSION__/GoogleMapsBase.xcframework.zip",
             checksum: "__GoogleMapsBase__checksum__"
         ),
         .binaryTarget(
             name: "GoogleMapsCore",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMapsCore.xcframework.zip",
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/__VERSION__/GoogleMapsCore.xcframework.zip",
             checksum: "__GoogleMapsCore__checksum__"
         ),
         .binaryTarget(
             name: "GoogleMapsM4B",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GoogleMapsM4B.xcframework.zip",
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/__VERSION__/GoogleMapsM4B.xcframework.zip",
             checksum: "__GoogleMapsM4B__checksum__"
         ),
         .binaryTarget(
             name: "GooglePlaces",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/__VERSION__/GooglePlaces.xcframework.zip",
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/__VERSION__/GooglePlaces.xcframework.zip",
             checksum: "__GooglePlaces__checksum__"
         ),
     ]

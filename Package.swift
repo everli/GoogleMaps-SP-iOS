@@ -5,7 +5,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "GoogleMapsWrapper",
+    name: "GoogleMapsSP",
     products: [
         .library(
             name: "GoogleMaps",
@@ -38,28 +38,28 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "GoogleMaps",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMaps.xcframework.zip",
-            checksum: "f5cefd2095e59d1e83209adce28c9efe4b8333c1c1816cfabee5c3dd77bff2cf"
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/6.0.1-maps/GoogleMaps.xcframework.zip",
+            checksum: "16a389e375f3ff7e71d4f12b2d3851946215b0a12b4a8d1006b9d52070366966"
         ),
         .binaryTarget(
             name: "GoogleMapsBase",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMapsBase.xcframework.zip",
-            checksum: "26e6743e8d4a7f4052dfa1a0d439eb6f34e6048155455026a863e34b373f3ca5"
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/6.0.1-maps/GoogleMapsBase.xcframework.zip",
+            checksum: "d296c2b1e82dab82b2a55caad0ee5f9a99097779bac08ad884f4a36dce72b9a1"
         ),
         .binaryTarget(
             name: "GoogleMapsCore",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMapsCore.xcframework.zip",
-            checksum: "a25ef17e87570a8e9950e9c22a11a9d94ebec8f4ba7c73fca43049497996e347"
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/6.0.1-maps/GoogleMapsCore.xcframework.zip",
+            checksum: "829cfc8f311025fd643ae24770983ceb61307a1b2787cbb20ebaac1d911bed7e"
         ),
         .binaryTarget(
             name: "GoogleMapsM4B",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GoogleMapsM4B.xcframework.zip",
-            checksum: "0ebb3a7664ec178d276599a0cd82c323893c88576bd2e0840a783dfd8e0adf6d"
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/6.0.1-maps/GoogleMapsM4B.xcframework.zip",
+            checksum: "3f5373d00b1008e3096fa801fcb68c37fbf2fe35ea491480cc750d13a7234895"
         ),
         .binaryTarget(
             name: "GooglePlaces",
-            url: "https://github.com/everli/GoogleMapsWrapper-iOS/releases/download/6.0.1-maps/GooglePlaces.xcframework.zip",
-            checksum: "35482d2b36db4139bb16b3ac6a401e9f2f6781220d502f11c6cd4f26ab62b2d4"
+            url: "https://github.com/everli/GoogleMaps-SP-iOS/releases/download/6.0.1-maps/GooglePlaces.xcframework.zip",
+            checksum: "3b1bac13ceef6e249f213000849a2451b285d77697534e10f1a9f0474bf6a898"
         ),
     ]
 )
