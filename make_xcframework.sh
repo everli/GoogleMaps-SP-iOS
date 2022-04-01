@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=${1:-6.0.1-maps} # Default value 6.0.1-maps
+VERSION=${1:-6.1.1} # Default value 6.1.1
 BUILD_DIRECTORY="Build"
 
 function convert_frameworks_arm64_to_iphonesimulator() {
